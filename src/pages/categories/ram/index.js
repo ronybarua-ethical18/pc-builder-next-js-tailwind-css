@@ -1,15 +1,12 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import RootLayout from "@/components/Layout/RootLayout";
 import Head from "next/head";
+import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export default function Ram() {
   return (
-    <>
+    <div>
       <Head>
-        <title>PC Builder Home</title>
+        <title>Ram</title>
         <meta
           name="description"
           content="This is news portal of programming hero made by next-js"
@@ -17,15 +14,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+        className={`min-h-screen`}
       >
-        <h1 className="text-6xl text-purple-600">Hello there</h1>
+        <h1 className="text-6xl text-purple-600">This is Ram page</h1>
       </main>
-    </>
+    </div>
   );
 }
 
-Home.getLayout = function getLayout(page) {
+Ram.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
