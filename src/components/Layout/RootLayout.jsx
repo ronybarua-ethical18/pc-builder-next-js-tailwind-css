@@ -127,7 +127,7 @@ const RootLayout = ({ children }) => {
             {children}
           </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center' }}>PC Builder App By Rony Barua</Footer>
       </Layout>
     </Layout>
   );

@@ -1,4 +1,5 @@
 import RootLayout from "@/components/Layout/RootLayout";
+import ProductsByCategory from "@/components/UI/ProductsByCategory";
 import Head from "next/head";
 import React from "react";
 
@@ -18,7 +19,8 @@ export default function Others() {
       <main
         className={`min-h-screen`}
       >
-        <h1 className="text-6xl text-purple-600">This is Others page</h1>
+                 <h1 className="text-2xl text-blue-500 text-left mb-5">Others</h1>
+        <ProductsByCategory category="others"/>
       </main>
     </div>
   );
