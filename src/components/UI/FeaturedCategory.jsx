@@ -20,7 +20,7 @@ export default function FeaturedCategory() {
             <Link href={item.link}>
             <div className="p-10 shadow-md rounded-md text-center cursor-pointer">
               <div>
-                {item.icon}
+                <>{item.icon}</>
                <h2 className="text-xl font-normal mt-3"> {item.category}</h2>
               </div>
             </div>

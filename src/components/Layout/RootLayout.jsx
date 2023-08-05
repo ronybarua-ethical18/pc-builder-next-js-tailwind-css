@@ -73,9 +73,9 @@ const RootLayout = ({ children }) => {
     }
   
     return breadcrumbLabels.map((label, index) => (
-      <Breadcrumb.Item key={index}>
+      <Breadcrumb.Item key={index +1}>
         {index === breadcrumbLabels.length - 1 ? (
-          label
+          <p>label</p>
         ) : (
           <Link href={getLinkHref(index)}>{label}</Link>
         )}

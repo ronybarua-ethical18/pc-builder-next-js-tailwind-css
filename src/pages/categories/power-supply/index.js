@@ -19,7 +19,7 @@ export default function PowerSupply() {
       <main
         className={`min-h-screen`}
       >
-         <h1 className="text-2xl text-blue-500 text-left mb-5">Monitor</h1>
+         <h1 className="text-2xl text-blue-500 text-left mb-5">Power Supply Unit</h1>
         <ProductsByCategory category="power supply unit"/>
       </main>
     </div>
