@@ -16,7 +16,7 @@ export default function FeaturedCategory() {
     <>
       <Row gutter={[16, 16]}>
         {categories.map((item) => (
-          <Col span={4} key={item.id}>
+          <Col xl={4} lg={8} md={12} sm={12} xs={24} key={item.id}>
             <Link href={item.link}>
             <div className="p-10 shadow-md rounded-md text-center cursor-pointer">
               <div>

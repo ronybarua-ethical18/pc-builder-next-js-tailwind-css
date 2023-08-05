@@ -1,39 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PC Builder App
+To try out the live version of the PC Builder app, visit [https://pc-builder-app.example.com](https://pc-builder-app.example.com).
 
-## Getting Started
 
-First, run the development server:
+Welcome to the PC Builder application! This app allows you to create your dream PC by selecting components from various categories. With a wide range of products and categories available, you can build the perfect computer that meets your specific needs. Let's dive into the features and instructions to run this Next.js project.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **CPU / Processor:** Browse and select from a diverse range of CPUs and processors for your PC.
+- **Motherboard:** Find the perfect motherboard that matches your CPU and supports all your other components.
+- **RAM:** Choose the right RAM size and speed to ensure smooth performance.
+- **Power Supply Unit (PSU):** Select a reliable and efficient PSU to power up your PC.
+- **Storage Device:** Find storage devices with different capacities and types (SSD, HDD) to store your data.
+- **Monitor:** Explore a variety of monitors with different resolutions and refresh rates for the best visual experience.
+- **Others:** Discover other essential components like cooling solutions, graphics cards, and more.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+In addition to the above features, the app also offers:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Featured Products:** Curated list of top products in each category to help you make quick decisions.
+- **Featured Category:** Handpicked categories for different PC use-cases (e.g., Gaming, Video Editing, Office Work) with pre-selected products that are well-suited for the respective tasks.
+- **Authentication System:** I have used next auth for authenticating user
+- **PC Builder:** Build your customized PC by selecting at least five category products. Please note that you need to be logged in to access this feature.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## How to Run the Project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# pc-builder-next-js-tailwind-css
+To run the PC Builder application locally on your machine, follow these steps:
+  
+  npm run dev

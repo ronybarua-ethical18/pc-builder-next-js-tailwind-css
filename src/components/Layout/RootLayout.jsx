@@ -98,7 +98,7 @@ const RootLayout = ({ children }) => {
         </Menu>
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }} className='flex items-center justify-between mb-5'>
+        <Header style={{ padding: 0, background: colorBgContainer }} className='flex items-center justify-between mb-5 flex-wrap'>
           <h1 className="text-2xl font-semibold text-blue-500 ml-10">PC Builder App</h1>
          <div className="flex items-center space-x-2">
          {!session?.user?.email ? <Link href={"/login"}><Button className=''>
