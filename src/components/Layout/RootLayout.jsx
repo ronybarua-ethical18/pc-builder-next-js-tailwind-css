@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSession, signIn, signOut } from "next-auth/react"
 import {
   DesktopOutlined,
   FileOutlined,
@@ -41,6 +42,10 @@ const RootLayout = ({ children }) => {
   
   const [selectedKeys, setSelectedKeys] = useState(['1']);
   const [breadcrumbItems, setBreadcrumbItems] = useState(['User', 'Bill']);
+  const {data:session} = useSession()
+
+  console.log("session next auth", session)
+
   const handleMenuItemClick = ({ keyPath }) => {
     setSelectedKeys(keyPath);
     setBreadcrumbItems(keyPath.slice(1).filter((key) => key !== 'sub1'));
@@ -61,26 +66,6 @@ const RootLayout = ({ children }) => {
         </Menu.Item>
       );
     });
-  };
-
-  const generateBreadcrumb = () => {
-    const breadcrumbLabels = [];
-    for (const key of selectedKeys) {
-      const item = findItemByKey(key);
-      if (item) {
-        breadcrumbLabels.push(item.label);
-      }
-    }
-  
-    return breadcrumbLabels.map((label, index) => (
-      <Breadcrumb.Item key={index +1}>
-        {index === breadcrumbLabels.length - 1 ? (
-          <p>label</p>
-        ) : (
-          <Link href={getLinkHref(index)}>{label}</Link>
-        )}
-      </Breadcrumb.Item>
-    ));
   };
   
   const findItemByKey = (key, itemsList = items) => {
@@ -113,21 +98,29 @@ const RootLayout = ({ children }) => {
         </Menu>
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }} className='flex justify-end items-center'>
-          <Link href={"/pc-builder"}><Button type='primary' className='mr-5 bg-blue-500'>
+        <Header style={{ padding: 0, background: colorBgContainer }} className='flex items-center justify-between mb-5'>
+          <h1 className="text-2xl font-semibold text-blue-500 ml-10">PC Builder App</h1>
+         <div className="flex items-center space-x-2">
+         {!session?.user?.email ? <Link href={"/login"}><Button className=''>
+            Login
+          </Button></Link>:<Link href={"/login"} onClick={() => signOut()}><Button className=''>
+            Logout
+          </Button></Link>}
+         <Link href={"/pc-builder"}><Button type='primary' className='mr-5 bg-blue-500'>
             PC Builder
           </Button></Link>
+         </div>
         </Header>
         <Content style={{ margin: '0 16px' }}>
           {/* Step 3: Generate breadcrumb based on breadcrumbItems */}
-          <Breadcrumb style={{ margin: '16px 0' }}>
+          {/* <Breadcrumb style={{ margin: '16px 0' }}>
             {generateBreadcrumb()}
-          </Breadcrumb>
+          </Breadcrumb> */}
           <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
             {children}
           </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>PC Builder App By Rony Barua</Footer>
+        <Footer style={{ textAlign: 'center' }} className="text-xl">PC Builder App By Rony Barua</Footer>
       </Layout>
     </Layout>
   );

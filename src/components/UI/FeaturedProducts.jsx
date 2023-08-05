@@ -12,9 +12,11 @@ import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { setPCBuildersComponents } from "@/redux/productSlice";
 import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 const { Meta } = Card;
 
 export default function FeaturedProducts({ product }) {
+  const {data:session} = useSession()
   const dispatch = useDispatch()
   const {pcBuilderComponents} = useSelector(state => state.product)
   const router = useRouter()
@@ -47,10 +49,10 @@ export default function FeaturedProducts({ product }) {
       </div>
       <div className="flex items-center justify-between mt-3">
       <Link href={`/products/${product.id}`}><EyeOutlined key="setting"/></Link>
-        <Button type="primary" className="w-auto bg-blue-500" onClick={() =>{
+       {session?.user?.email && <Button type="primary" className="w-auto bg-blue-500" onClick={() =>{
           dispatch(setPCBuildersComponents([...pcBuilderComponents, product]))
           router.push("/pc-builder")
-          }}>Add</Button>
+          }}>Add to builder</Button>}
       </div>
     </Card>
   );
