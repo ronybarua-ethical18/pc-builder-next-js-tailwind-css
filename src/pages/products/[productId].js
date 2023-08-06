@@ -69,28 +69,44 @@ ProductDetailPage.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/products");
-  const products = await res.json();
+  try {
+    const res = await fetch("http://localhost:3000/api/products");
+    const products = await res.json();
 
-  const paths = products?.data?.map((product) => ({
-    params: { productId: String(product.id) },
-  }));
+    const paths = products?.data?.map((product) => ({
+      params: { productId: String(product.id) },
+    }));
 
-  return { paths, fallback: false };
+    return { paths, fallback: false };
+  } catch (error) {
+    // Handle the error gracefully, e.g., show an error page
+    console.error("Error fetching product paths:", error);
+    return { paths: [], fallback: false };
+  }
 };
 
 export const getStaticProps = async (context) => {
-  const { params } = context;
-  const res = await fetch(
-    `http://localhost:3000/api/products?productId=${params.productId}`
-  );
-  const product = await res.json();
+  try {
+    const { params } = context;
+    const res = await fetch(
+      `http://localhost:3000/api/products?productId=${params.productId}`
+    );
+    const product = await res.json();
 
-  console.log("data single", product);
+    console.log("data single", product);
 
-  return {
-    props: {
-      product: product.data,
-    },
-  };
+    return {
+      props: {
+        product: product.data,
+      },
+    };
+  } catch (error) {
+    // Handle the error gracefully, e.g., show an error page
+    console.error("Error fetching product data:", error);
+    return {
+      props: {
+        product: null,
+      },
+    };
+  }
 };
