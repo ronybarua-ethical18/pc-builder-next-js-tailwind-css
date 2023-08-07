@@ -31,7 +31,7 @@ export default function Home({products}) {
             products?.data.sort(() => 0.5 - Math.random())
             .slice(0, 6)
             ?.map((product) => (
-              <Col xl={6} lg={8} md={12} sm={12} xs={24} key={product.key}>
+              <Col xl={6} lg={8} md={12} sm={24} xs={24} key={product.key}>
                 <FeaturedProducts product={product} />
               </Col>
             ))}
