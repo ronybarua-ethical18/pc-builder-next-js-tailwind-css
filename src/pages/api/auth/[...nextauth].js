@@ -14,7 +14,7 @@ export const authOptions = {
       })
   ],
   pages:{
-    signIn:"/login"
+    signIn:"http://pc-builder-next-js-tailwind-css.vercel.app/login"
   }
 }
 export default NextAuth(authOptions)

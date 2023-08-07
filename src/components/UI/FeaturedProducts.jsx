@@ -31,7 +31,7 @@ export default function FeaturedProducts({ product }) {
         // eslint-disable-next-line @next/next/no-img-element
         <img
           alt="example"
-          src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          src="https://bleuwire.com/wp-content/uploads/2019/03/laptop-accessories.jpg"
         />
       }
    

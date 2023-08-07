@@ -1,5 +1,5 @@
 # PC Builder App
-To try out the live version of the PC Builder app, visit [https://pc-builder-app.example.com](https://pc-builder-app.example.com).
+To try out the live version of the PC Builder app, visit [https://pc-builder-next-js-tailwind-css.vercel.app](https://pc-builder-next-js-tailwind-css.vercel.app).
 
 
 Welcome to the PC Builder application! This app allows you to create your dream PC by selecting components from various categories. With a wide range of products and categories available, you can build the perfect computer that meets your specific needs. Let's dive into the features and instructions to run this Next.js project.
