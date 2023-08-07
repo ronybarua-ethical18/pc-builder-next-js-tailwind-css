@@ -21,37 +21,37 @@ export default function PCBuilder() {
     {
       id: 1,
       category: "CPU / Processor",
-      link: "/categories/cpu-processor",
+      link: "/cpu-processor",
       icon: <DashboardOutlined className="text-4xl" />,
     },
     {
       id: 2,
       category: "Monitor",
-      link: "/categories/monitor",
+      link: "/monitor",
       icon: <DesktopOutlined className="text-4xl" />,
     },
     {
       id: 3,
       category: "Storage Device",
-      link: "/categories/storage-device",
+      link: "/storage-device",
       icon: <CloudServerOutlined className="text-4xl" />,
     },
     {
       id: 4,
       category: "RAM",
-      link: "/categories/ram",
+      link: "/ram",
       icon: <NumberOutlined className="text-4xl" />,
     },
     {
       id: 5,
       category: "Motherboard",
-      link: "/categories/motherboard",
+      link: "/motherboard",
       icon: <TableOutlined className="text-4xl" />,
     },
     {
       id: 6,
       category: "Power Supply Unit",
-      link: "/categories/power-supply",
+      link: "/power-supply",
       icon: <ThunderboltOutlined className="text-4xl" />,
     },
   ];
@@ -61,7 +61,6 @@ export default function PCBuilder() {
       (item) => item.category.toLowerCase() === category.category.toLowerCase()
     );
 
-    console.log("mani", find);
     if (find) {
       return {
         ...category,
@@ -74,7 +73,6 @@ export default function PCBuilder() {
     return category;
   });
 
-  console.log("pc builder components", pcBuilderComponents);
   return (
     <div>
       <Head>

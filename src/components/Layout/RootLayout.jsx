@@ -24,13 +24,13 @@ function getItem(label, key, icon, route, children) {
 const items = [
   getItem('Home', '1', <PieChartOutlined />, '/'), // Add the route for Home
   getItem('Categories', 'sub1', <UserOutlined />, null, [
-    getItem('CPU / Processor', '3', null, '/categories/cpu-processor'), // Add the route for CPU / Processor
-    getItem('Motherboard', '4', null, '/categories/motherboard'), // Add the route for Motherboard
-    getItem('RAM', '5', null, '/categories/ram'), // Add the route for RAM
-    getItem('Power Supply Unit', '6', null, '/categories/power-supply'), // Add the route for Power Supply Unit
-    getItem('Storage Device', '7', null, '/categories/storage-device'), // Add the route for Storage Device
-    getItem('Monitor', '8', null, '/categories/monitor'), // Add the route for Monitor
-    getItem('Others', '9', null, '/categories/others'), // Add the route for Others
+    getItem('CPU / Processor', '3', null, '/cpu-processor'), // Add the route for CPU / Processor
+    getItem('Motherboard', '4', null, '/motherboard'), // Add the route for Motherboard
+    getItem('RAM', '5', null, '/ram'), // Add the route for RAM
+    getItem('Power Supply Unit', '6', null, '/power-supply'), // Add the route for Power Supply Unit
+    getItem('Storage Device', '7', null, '/storage-device'), // Add the route for Storage Device
+    getItem('Monitor', '8', null, '/monitor'), // Add the route for Monitor
+    getItem('Others', '9', null, '/others'), // Add the route for Others
   ]),
 ];
 

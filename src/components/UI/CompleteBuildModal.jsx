@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal, Rate } from "antd";
+import { Button, Modal, Rate, message } from "antd";
 import { useSelector } from "react-redux";
 const CompleteBuildModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,6 +10,7 @@ const CompleteBuildModal = () => {
   };
   const handleOk = () => {
     setIsModalOpen(false);
+    message.success("PC Build Successful with the components")
   };
   const handleCancel = () => {
     setIsModalOpen(false);

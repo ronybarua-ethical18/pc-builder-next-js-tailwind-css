@@ -5,12 +5,12 @@ import { CloudServerOutlined, DashboardOutlined, DesktopOutlined, MonitorOutline
 
 export default function FeaturedCategory() {
   const categories = [
-    { id: 1, category: "CPU / Processor", link:"/categories/cpu-processor", icon:<DashboardOutlined className="text-4xl"/> },
-    { id: 2, category: "Monitor", link:"/categories/monitor", icon:<DesktopOutlined className="text-4xl" /> },
-    { id: 3, category: "Storage Device", link:"/categories/storage-device", icon:<CloudServerOutlined  className="text-4xl" /> },
-    { id: 4, category: "RAM", link:"/categories/ram", icon:<NumberOutlined className="text-4xl" /> },
-    { id: 5, category: "Motherboard", link:"/categories/motherboard", icon:<TableOutlined className="text-4xl" /> },
-    { id: 6, category: "Power Supply Unit", link:"/categories/power-supply", icon:<ThunderboltOutlined className="text-4xl" /> },
+    { id: 1, category: "CPU / Processor", link:"/cpu-processor", icon:<DashboardOutlined className="text-4xl"/> },
+    { id: 2, category: "Monitor", link:"/monitor", icon:<DesktopOutlined className="text-4xl" /> },
+    { id: 3, category: "Storage Device", link:"/storage-device", icon:<CloudServerOutlined  className="text-4xl" /> },
+    { id: 4, category: "RAM", link:"/ram", icon:<NumberOutlined className="text-4xl" /> },
+    { id: 5, category: "Motherboard", link:"/motherboard", icon:<TableOutlined className="text-4xl" /> },
+    { id: 6, category: "Power Supply Unit", link:"/power-supply", icon:<ThunderboltOutlined className="text-4xl" /> },
   ];
   return (
     <>
