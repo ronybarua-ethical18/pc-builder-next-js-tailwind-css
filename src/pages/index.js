@@ -6,7 +6,6 @@ import { Col, Row } from "antd";
 // import { products } from "../../dummyProducts";
 import FeaturedCategory from "@/components/UI/FeaturedCategory";
 import dynamic from "next/dynamic";
-import { useSession } from "next-auth/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,6 +55,14 @@ Home.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
+
+  if(typeof window === 'undefined'){
+    return {
+      props: {
+        products: [],
+      },
+    };
+  }
   // const res = await fetch("http://localhost:3000/api/news"); // internal API connected with mongoDB
   const res = await fetch("http://localhost:3000/api/products"); // --> json server
   const data = await res.json();

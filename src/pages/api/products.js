@@ -1,5 +1,3 @@
-import { connectToDatabase } from "./dbConnection";
-
 import { MongoClient, ServerApiVersion } from "mongodb";
 
 const uri =

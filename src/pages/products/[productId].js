@@ -70,7 +70,11 @@ ProductDetailPage.getLayout = function getLayout(page) {
 
 export const getStaticPaths = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/products");
+    if(typeof window === 'undefined'){
+      return { paths:[], fallback: false };
+    }
+
+    const res = await fetch(`${process.env.LOCALHOST_URL}/api/products`);
     const products = await res.json();
 
     const paths = products?.data?.map((product) => ({
@@ -87,6 +91,15 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   try {
+    if(typeof window === 'undefined'){
+      return {
+        props: {
+          product: [],
+        },
+      };
+    }
+
+
     const { params } = context;
     const res = await fetch(
       `http://localhost:3000/api/products?productId=${params.productId}`
@@ -105,7 +118,7 @@ export const getStaticProps = async (context) => {
     console.error("Error fetching product data:", error);
     return {
       props: {
-        product: null,
+        product: [],
       },
     };
   }
