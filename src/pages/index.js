@@ -56,15 +56,15 @@ Home.getLayout = function getLayout(page) {
 
 export const getStaticProps = async () => {
 
-  if(typeof window === 'undefined'){
-    return {
-      props: {
-        products: [],
-      },
-    };
-  }
-  // const res = await fetch("http://localhost:3000/api/news"); // internal API connected with mongoDB
-  const res = await fetch("http://localhost:3000/api/products"); // --> json server
+  // if(typeof window === 'undefined'){
+  //   return {
+  //     props: {
+  //       products: [],
+  //     },
+  //   };
+  // }
+
+  const res = await fetch(`${process.env.LOCALHOST_URL}/api/products`); // --> json server
   const data = await res.json();
   // console.log(data);
   return {
