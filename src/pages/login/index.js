@@ -21,11 +21,25 @@ export default function Login() {
             Login System
           </h1>
           <div className="text-center">
-            <div className="p-3 rounded-sm border mx-4 mt-20 flex items-center space-x-2 justify-center cursor-pointer" onClick={() => signIn("github",{callbackUrl:`${process.env.URL}/pc-builder`})}>
-              <GithubFilled/>
+            <div
+              className="p-3 rounded-sm border mx-4 mt-20 flex items-center space-x-2 justify-center cursor-pointer"
+              onClick={() =>
+                signIn("github", {
+                  callbackUrl: `http://pc-builder-next-js-tailwind-css.vercel.app/pc-builder`,
+                })
+              }
+            >
+              <GithubFilled />
               <h3>Login with Github</h3>
             </div>
-            <div className="p-3 rounded-sm border mx-4 mt-4 flex items-center space-x-2 justify-center cursor-pointer" onClick={() => signIn("google",{callbackUrl:`${process.env.URL}/pc-builder`})}>
+            <div
+              className="p-3 rounded-sm border mx-4 mt-4 flex items-center space-x-2 justify-center cursor-pointer"
+              onClick={() =>
+                signIn("google", {
+                  callbackUrl: `http://pc-builder-next-js-tailwind-css.vercel.app/pc-builder`,
+                })
+              }
+            >
               <GoogleOutlined />
               <h3>Login with Google</h3>
             </div>
